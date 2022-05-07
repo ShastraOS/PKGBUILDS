@@ -1,2 +1,2 @@
 # PKGBUILDS
-PKGBUILDS for the packages in [shastra-repo](https://github.com/Shastra-OS/shasra-repo)
+PKGBUILDS for the packages in [Shastra Repo](https://gitlab.com/shastraos/shastrarepo)
