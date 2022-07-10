@@ -1,7 +1,7 @@
-pkgbase = pamac-aur
-	pkgdesc = A Gtk3 frontend, Package Manager based on libalpm with AUR and Appstream support
+pkgbase = pamac-shastra
+	pkgdesc = A Gtk3 frontend, Package Manager based on libalpm (everything in one package - snap, flatpak, appindicator)
 	pkgver = 10.4.1
-	pkgrel = 0
+	pkgrel = 1
 	url = https://gitlab.manjaro.org/applications/pamac
 	install = pamac.install
 	arch = i686
@@ -47,4 +47,4 @@ pkgbase = pamac-aur
 	source = pamac-10.4.1-0.tar.gz::https://gitlab.manjaro.org/applications/pamac/-/archive/d8e7b741f186e9ccad6834da12a4286463ff8f08/pamac-d8e7b741f186e9ccad6834da12a4286463ff8f08.tar.gz
 	sha256sums = 488038a9dddea3d0198756e5e83a9916cccd257401bfbbaa5b36ab0fd11a21ce
 
-pkgname = pamac-aur
+pkgname = pamac-shastra
