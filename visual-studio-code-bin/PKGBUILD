@@ -2,7 +2,7 @@
 
 pkgname=visual-studio-code-bin
 _pkgname=visual-studio-code
-pkgver=1.66.1
+pkgver=1.70.2
 pkgrel=1
 pkgdesc="Visual Studio Code (vscode): Editor for building and debugging modern web and cloud applications (official binary version)"
 arch=('x86_64' 'i686' 'aarch64' 'armv7h')
@@ -16,7 +16,9 @@ install=$pkgname.install
 depends=(libxkbfile gnupg gtk3 libsecret nss gcc-libs libnotify libxss glibc lsof shared-mime-info xdg-utils)
 optdepends=('glib2: Needed for move to trash functionality'
             'libdbusmenu-glib: Needed for KDE global menu'
-            'org.freedesktop.secrets: Needed for settings sync')
+            'org.freedesktop.secrets: Needed for settings sync'
+             # See https://github.com/MicrosoftDocs/live-share/issues/4650
+            'icu69: Needed for live share' )
 source=(${_pkgname}.desktop ${_pkgname}-url-handler.desktop ${_pkgname}-workspace.xml ${_pkgname}-bin.sh)
 source_x86_64=(code_x64_${pkgver}.tar.gz::https://update.code.visualstudio.com/${pkgver}/linux-x64/stable)
 source_aarch64=(code_arm64_${pkgver}.tar.gz::https://update.code.visualstudio.com/${pkgver}/linux-arm64/stable)
@@ -25,14 +27,14 @@ source_armv7h=(code_armhf_${pkgver}.tar.gz::https://update.code.visualstudio.com
 # i686 uses "latest" instead of a specific version as it's not always updated in a timely manner
 source_i686=(code_ia32_${pkgver}.tar.gz::https://update.code.visualstudio.com/latest/linux-ia32/stable)
 # This generates cleaner checksums
-sha256sums=('f0be273247878b66c7d10500718220e3e24abce29f7be94b4e875c3cf21b8a3b'
-            '730b9d57a6d5cd91611b01ad2f1f26b1b61c344a72e7d05fb7e27329c5234d4e'
+sha256sums=('dc7dedfb031863f2bdb8d3a12df6bf58b5627b767a56a82cc5d85421e04e94b8'
+            '2264dd138b77358709aa49fb3a7fe7d1b05b7ab0715760d66958000107bdd3dc'
             '24ba09a6398c9781ed7cb6f1a9f6f38ec204899ba1f33db92638bf6d3cb0aed6'
-            '71e89d296273344ab5358d8f4ddb093d748906de568735cb84dbc932ff884c5a')
-sha256sums_x86_64=('922e9f711a48a44171a4c821eff8cab0afa44e287346cda1bbb2737afc8ee5c8')
+            'd0df59f13bd721a5c896eeaa0ca407bd304f6bd6ec41f54c19221ccc31eeb06b')
+sha256sums_x86_64=('fa9b44b153763c3b74fec50b3ade9f7ff2808dd38df362783db591fc0fa1e422')
 sha256sums_i686=('64360439cc2fa596838062f7e6f9757b79d4b775a564f18bad6cbad154bf850c')
-sha256sums_aarch64=('b74d357030222bc9bcb2f32bf0ddbb3f4e3becef39061b3d60bb17f7654382d2')
-sha256sums_armv7h=('09357aec80ea6b69d580acf703ca7f1cc4ba922d3b299a89916c0f24dbdf2cee')
+sha256sums_aarch64=('30a9cf78608d62eade1e1bef36c1a16cdc161c8667b3a0f67038b3e9ffd165b0')
+sha256sums_armv7h=('f3c4e7cdae2312936319686a8ffe6ab05d30c8ea06df9659d37f36b942397283')
 
 
 
